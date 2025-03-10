@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            font-family: "roboto", sans-serif;
+            margin: 0;
+        }
+
+        h1 {
+            color: rgb(179, 131, 226);
+            font-size: 10rem;
+            text-align: center;
+            opacity: 0.4;
+
+        }
+.form{
+    margin: 7%;
+}
+        .input {
+            width: 400px;
+            max-width: 100%;
+            box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.1);
+            margin: auto;
+            margin-top: 1%;
+            border: none;
+            width: 100%;
+            display: block;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            margin-bottom: 2%;
+        }
+
+        .input::placeholder {
+            color: #d5d5d5;
+
+        }
+
+        .date {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .form-group{
+            width: 45%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Todos</h1>
+    <div class="form">
+        <Label>Task Title</Label>
+        <input type="text" class="input" placeholder="Enter Your Task Title " autocomplete="off" id="title">
+        <div class="date">
+            <div class="form-group">
+                <Label><i class="fa-solid fa-calendar-week" style="color: #b383e2;"></i> &nbsp;&nbsp;&nbsp;Start Date</Label>
+                <input type="date" class="input" autocomplete="off" id="startDate">
+            </div>
+            <div class="form-group"> 
+                <Label><i class="fa-solid fa-calendar-week" style="color: #b383e2;"></i>&nbsp;&nbsp;&nbsp; End Date</Label>
+                <input type="date" class="input" autocomplete="off" id="endDate">
+            </div>
+        </div>
+    </div>
+<button type="submit" class="" onclick="sa">Add Task</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

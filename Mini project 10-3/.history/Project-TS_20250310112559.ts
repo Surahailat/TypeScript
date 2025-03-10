@@ -1,0 +1,3 @@
+interface Task {
+    ID : number
+}
