@@ -20,10 +20,10 @@ function save(event) {
 
 
     if (!title || !discription || !startDate || !endDate) {
-        alert("Please fill in all fields");
-        return;
+        alert("يرجى ملء جميع الحقول قبل الحفظ!");
+        return; // منع تنفيذ الكود إذا كانت هناك حقول فارغة
     }
-
+    
     let taskkk: Task = {
         ID: Date.now(),
         Title: title,
@@ -51,11 +51,6 @@ function viewProducts() {
 
     if (view) {
         view.innerHTML="";
-
-        if (tasks.length === 0) {
-            view.innerHTML = "<p>No tasks available.</p>";
-            return;
-        }
         for (let i = 0; i < tasks.length; i++) {
             view.innerHTML += `
                 
@@ -87,20 +82,3 @@ function viewProducts() {
     }
 
 }
-// function deleteTask(id: number) {
-
-//     //Add the tasks except the target id to be deleted
-//     tasksList = tasksList.filter(task => task.id !== id);
-
-//     //Reset the ID 
-//     tasksList = tasksList.map((task, index) => ({
-//         ...task,
-//         id: index + 1,
-//     }));
-
-//     //Reasssign the tasks list to the local storage
-//     localStorage.setItem("Tasks", JSON.stringify(tasksList));
-
-//     //Display all tasks
-//     displayTasks()
-// }

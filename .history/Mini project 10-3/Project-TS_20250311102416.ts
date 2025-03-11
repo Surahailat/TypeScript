@@ -19,10 +19,10 @@ function save(event) {
     let endDate = (document.getElementById("endDate") as HTMLInputElement).value;
 
 
-    if (!title || !discription || !startDate || !endDate) {
-        alert("Please fill in all fields");
-        return;
-    }
+    // if (!title || !discription || !startDate || !endDate) {
+    //     alert("يرجى ملء جميع الحقول قبل الحفظ!");
+    //     return;
+    // }
 
     let taskkk: Task = {
         ID: Date.now(),

@@ -19,10 +19,10 @@ function save(event) {
     let endDate = (document.getElementById("endDate") as HTMLInputElement).value;
 
 
-    if (!title || !discription || !startDate || !endDate) {
-        alert("Please fill in all fields");
-        return;
-    }
+    // if (!title || !discription || !startDate || !endDate) {
+    //     alert("يرجى ملء جميع الحقول قبل الحفظ!");
+    //     return;
+    // }
 
     let taskkk: Task = {
         ID: Date.now(),
@@ -87,20 +87,3 @@ function viewProducts() {
     }
 
 }
-// function deleteTask(id: number) {
-
-//     //Add the tasks except the target id to be deleted
-//     tasksList = tasksList.filter(task => task.id !== id);
-
-//     //Reset the ID 
-//     tasksList = tasksList.map((task, index) => ({
-//         ...task,
-//         id: index + 1,
-//     }));
-
-//     //Reasssign the tasks list to the local storage
-//     localStorage.setItem("Tasks", JSON.stringify(tasksList));
-
-//     //Display all tasks
-//     displayTasks()
-// }

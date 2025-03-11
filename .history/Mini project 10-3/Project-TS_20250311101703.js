@@ -6,10 +6,10 @@ function save(event) {
     // let states =(document.getElementById("states")as HTMLInputElement).value;
     var startDate = document.getElementById("startDate").value;
     var endDate = document.getElementById("endDate").value;
-    if (!title || !discription || !startDate || !endDate) {
-        alert("Please fill in all fields");
-        return;
-    }
+    // if (!title || !discription || !startDate || !endDate) {
+    //     alert("يرجى ملء جميع الحقول قبل الحفظ!");
+    //     return;
+    // }
     var taskkk = {
         ID: Date.now(),
         Title: title,
@@ -40,16 +40,3 @@ function viewProducts() {
         }
     }
 }
-// function deleteTask(id: number) {
-//     //Add the tasks except the target id to be deleted
-//     tasksList = tasksList.filter(task => task.id !== id);
-//     //Reset the ID 
-//     tasksList = tasksList.map((task, index) => ({
-//         ...task,
-//         id: index + 1,
-//     }));
-//     //Reasssign the tasks list to the local storage
-//     localStorage.setItem("Tasks", JSON.stringify(tasksList));
-//     //Display all tasks
-//     displayTasks()
-// }

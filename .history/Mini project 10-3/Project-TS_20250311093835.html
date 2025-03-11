@@ -15,8 +15,7 @@
 
         body {
             background-color: #f5f5f5;
-            font-family: cursive;    
-                    margin: 0;
+            font-family: cursive;            margin: 0;
         }
 
         h1 {
@@ -153,9 +152,6 @@
             gap: 100px;
             flex-wrap: wrap;
         }
-        label{
-            font-size: 1.6rem;
-        }
     </style>
 </head>
 
@@ -163,19 +159,19 @@
     <h1>Todos</h1>
     <div class="form">
         <Label>Task Title</Label>
-        <input type="text" class="input" placeholder="Enter Your Task Title " autocomplete="off" id="title" required>
+        <input type="text" class="input" placeholder="Enter Your Task Title " autocomplete="off" id="title">
         <Label>Discription</Label>
-        <input type="text" class="input" placeholder="Enter Your Discription " autocomplete="off" id="discription" required>
+        <input type="text" class="input" placeholder="Enter Your Discription " autocomplete="off" id="discription">
         <div class="date">
             <div class="form-group">
-                <Label><i class="fa-solid fa-calendar-week" style="color: #b383e2;"></i> &nbsp;&nbsp;Start
+                <Label><i class="fa-solid fa-calendar-week" style="color: #b383e2;"></i> &nbsp;&nbsp;&nbsp;Start
                     Date</Label>
-                <input type="date" class="input" autocomplete="off" id="startDate" required>
+                <input type="date" class="input" autocomplete="off" id="startDate">
             </div>
             <div class="form-group">
-                <Label><i class="fa-solid fa-calendar-week" style="color: #b383e2;"></i>&nbsp;&nbsp; End
+                <Label><i class="fa-solid fa-calendar-week" style="color: #b383e2;"></i>&nbsp;&nbsp;&nbsp; End
                     Date</Label>
-                <input type="date" class="input" autocomplete="off" id="endDate" required>
+                <input type="date" class="input" autocomplete="off" id="endDate">
             </div>
         </div>
     </div>

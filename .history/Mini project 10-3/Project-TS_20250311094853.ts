@@ -18,12 +18,6 @@ function save(event) {
     let startDate = (document.getElementById("startDate") as HTMLInputElement).value;
     let endDate = (document.getElementById("endDate") as HTMLInputElement).value;
 
-
-    if (!title || !discription || !startDate || !endDate) {
-        alert("Please fill in all fields");
-        return;
-    }
-
     let taskkk: Task = {
         ID: Date.now(),
         Title: title,
@@ -49,13 +43,8 @@ function viewProducts() {
     var tasks = product ? JSON.parse(product) : null;
 
 
-    if (view) {
+    if (view =! null) {
         view.innerHTML="";
-
-        if (tasks.length === 0) {
-            view.innerHTML = "<p>No tasks available.</p>";
-            return;
-        }
         for (let i = 0; i < tasks.length; i++) {
             view.innerHTML += `
                 
@@ -87,20 +76,23 @@ function viewProducts() {
     }
 
 }
-// function deleteTask(id: number) {
-
-//     //Add the tasks except the target id to be deleted
-//     tasksList = tasksList.filter(task => task.id !== id);
-
-//     //Reset the ID 
-//     tasksList = tasksList.map((task, index) => ({
-//         ...task,
-//         id: index + 1,
-//     }));
-
-//     //Reasssign the tasks list to the local storage
-//     localStorage.setItem("Tasks", JSON.stringify(tasksList));
-
-//     //Display all tasks
-//     displayTasks()
-// }
+// <div class="task-card">
+// <span class="badge">Main</span>
+// <h5>${tasks[i].Title}</h5>
+// <p>${tasks[i].Discription}</p>
+// <div class="date">
+//     <i class="fa-regular fa-calendar"></i>
+//     <span>${tasks[i].StartDate}</span>
+// <span>&nbsp;&nbsp;&nbsp;To&nbsp;&nbsp;&nbsp;</span>
+// <i class="fa-regular fa-calendar"></i>
+// <span>${tasks[i].EndDate}</span>
+// </div>
+// <div class="divider"></div>
+// <div class="actions">
+//     <button class="completed-btn">${tasks[i].States}</button>
+//     <div>
+//         <i class="fa-regular fa-star icon"></i>
+//         <button class="delete-btn"><i class="fa-regular fa-trash-can"></i></button>
+//     </div>
+// </div>
+// </div>

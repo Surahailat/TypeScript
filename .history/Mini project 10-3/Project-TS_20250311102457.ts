@@ -20,7 +20,7 @@ function save(event) {
 
 
     if (!title || !discription || !startDate || !endDate) {
-        alert("Please fill in all fields");
+        alert("");
         return;
     }
 
